@@ -1,0 +1,11 @@
+name = "shopify-scheduler"
+main = "src/index.js"
+compatibility_date = "2026-01-01"
+
+kv_namespaces = [
+  { binding = "RULES", id = "TU_KV_NAMESPACE_ID" }
+]
+
+# El cron corre cada 10 minutos y ejecuta las reglas vencidas.
+[triggers]
+crons = ["*/10 * * * *"]
